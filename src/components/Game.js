@@ -25,7 +25,7 @@ export default class Game extends Component {
     if (winner || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? "x" : "o";
+    squares[i] = this.state.xIsNext ? "X" : "O";
     this.setState({
       history: history.concat({
         squares: squares,
@@ -39,7 +39,7 @@ export default class Game extends Component {
     const current = history[this.state.stepNumber];
     const winner = calculatewinner(current.squares);
     const moves = history.map((step, move) => {
-      const desc = move ? "Go to #" + move : "start the Game";
+      const desc = move ? "Go to #" + move : "Start Game";
       return (
         <li key={move}>
           <button
@@ -54,9 +54,9 @@ export default class Game extends Component {
     });
     let status;
     if (winner) {
-      status = "winner is " + winner;
+      status = "Winner is " + winner;
     } else {
-      status = "Next player is " + (this.state.xIsNext ? "x" : "o");
+      status = "Next player is " + (this.state.xIsNext ? "X" : "O");
     }
     return (
       <div className="game">
