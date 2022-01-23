@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was a part of practicing reactjs course
 
 ## On live
 https://hungry-mestorf-7f30e8.netlify.app
